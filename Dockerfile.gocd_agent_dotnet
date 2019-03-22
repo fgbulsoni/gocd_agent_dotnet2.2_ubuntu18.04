@@ -11,4 +11,5 @@ RUN apt install -y --no-install-recommends wget gnupg ca-certificates && \
   echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | tee /etc/apt/sources.list.d/mono-official-stable.list && \
   apt update && \
   apt install -y mono-devel nuget && \
+  dotnet tool install --global dotnet-sonarscanner && \
   rm -rf /var/lib/apt/lists/*
